@@ -1,0 +1,57 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    /* Dark Mode Defaults */
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --text-muted: #b0b0b0;
+    --primary-accent: #2E7D32;
+    --secondary-accent: #FFD700;
+    --primary-accent-hover: #1B5E20;
+    --secondary-accent-hover: #E6C200;
+    --border-color: rgba(46, 125, 50, 0.3);
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+body.light-mode {
+    --primary-bg: #f7f7ff; /* A soft, off-white background */
+    --secondary-bg: #e8e8e8; /* A light gray for cards and sections */
+    --text-color: #1a1a1a; /* A very dark gray for primary text */
+    --text-muted: #555555; /* A medium gray for secondary text */
+    --primary-accent: #1B5E20; /* Darker green */
+    --secondary-accent: #D4AF37; /* A more subtle gold/yellow */
+    --primary-accent-hover: #2E7D32;
+    --secondary-accent-hover: #E6C200;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.5s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

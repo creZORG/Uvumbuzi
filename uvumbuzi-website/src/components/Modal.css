@@ -1,0 +1,158 @@
+/* src/components/Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 500px;
+    box-shadow: var(--card-shadow);
+    animation: modalSlideIn 0.3s ease-out forwards;
+    position: relative; /* Ensure proper positioning for mobile */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+    color: var(--secondary-accent);
+}
+
+.modal-body {
+    padding: 1rem 0;
+}
+
+/* Animations */
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Specific styles for modal content */
+.mobile-nav-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-items li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-items li a:hover {
+    color: var(--primary-accent);
+}
+
+.mobile-nav-items li a i {
+    font-size: 1.5rem;
+    color: var(--primary-accent);
+}
+
+.user-profile-content {
+    text-align: center;
+}
+
+.user-profile-content .profile-header {
+    margin-bottom: 2rem;
+}
+
+.user-profile-content .profile-icon {
+    font-size: 4rem;
+    color: var(--primary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.user-profile-content .profile-info h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.user-profile-content .profile-info p {
+    color: var(--text-muted);
+}
+
+.user-profile-content .profile-details {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.user-profile-content .profile-details h4 {
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.user-profile-content .profile-details p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.user-profile-content .btn-primary {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.not-logged-in-message {
+    text-align: center;
+}
+
+.not-logged-in-message p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        padding: 1rem;
+        width: 95%;
+    }
+}

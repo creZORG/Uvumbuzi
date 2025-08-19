@@ -1,0 +1,37 @@
+/* src/components/CTA.css */
+.cta-section {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, var(--primary-green), #1B5E20);
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

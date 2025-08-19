@@ -1,0 +1,8 @@
+/* src/pages/AdminPage/AdminPage.css */
+
+.admin-dashboard-page {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 80px; /* To account for the fixed navbar */
+    background-color: var(--primary-bg);
+}

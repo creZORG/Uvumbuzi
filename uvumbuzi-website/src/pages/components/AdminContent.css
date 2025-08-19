@@ -1,0 +1,60 @@
+/* src/pages/AdminPage/components/AdminContent.css */
+
+.admin-main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--primary-bg);
+}
+
+.admin-content-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-content-header h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-accent);
+}
+
+.menu-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+@media (max-width: 992px) {
+    .admin-main-content {
+        width: 100%;
+        padding: 1rem;
+        padding-top: 80px;
+    }
+    .admin-main-content.sidebar-open {
+        transform: translateX(250px);
+    }
+    .admin-content-header {
+        display: flex;
+    }
+}
+
+
+/* General Tab Content Styling */
+.admin-tab-content {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-muted);
+}

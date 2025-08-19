@@ -1,0 +1,133 @@
+/* src/pages/ProjectsPage.css */
+
+.projects-page {
+    padding: 10rem 5% 5rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.loading-state {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-accent);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-image-container {
+    position: relative;
+    height: 250px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.project-card.status-ongoing .project-status {
+    background-color: #FFA000;
+}
+
+.project-card.status-completed .project-status {
+    background-color: #4CAF50;
+}
+
+.project-card.status-upcoming .project-status {
+    background-color: var(--primary-accent);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.8rem;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.project-view-btn {
+    color: var(--primary-accent);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-view-btn:hover {
+    color: var(--secondary-accent);
+    transform: translateX(5px);
+}

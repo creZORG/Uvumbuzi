@@ -1,0 +1,92 @@
+/* src/components/Projects.css */
+.projects-showcase {
+    padding: var(--section-padding);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('https://ict.go.ke/sites/default/files/styles/media_gallery_image/public/2024-12/PS%20Kisiang%27ani%20Connected%20Summit.jpg?itok=WlkhYA7O') center/cover fixed;
+}
+
+.projects-showcase .section-title h2 {
+    color: white;
+}
+
+.projects-showcase .section-title h2::after {
+    background: var(--accent-gold);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.showcase-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.showcase-card:hover .showcase-image img {
+    transform: scale(1.1);
+}
+
+.showcase-content {
+    padding: 1.5rem;
+}
+
+.showcase-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-gold);
+}
+
+.showcase-content p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.showcase-btn {
+    color: var(--primary-green);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.showcase-btn:hover {
+    color: var(--accent-gold);
+    transform: translateX(5px);
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+}

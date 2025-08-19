@@ -1,0 +1,132 @@
+/* src/components/About.css */
+
+.about-page {
+    padding: var(--section-padding);
+    background-color: var(--darker-bg);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+}
+
+.mission-vision-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mission-vision-section .card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.mission-vision-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-vision-section .card h3 {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mission-vision-section .card p {
+    color: var(--text-light);
+}
+
+.team-section {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-green);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-member-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.team-member-card h4 {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+    color: var(--primary-green);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-subtitle {
+        font-size: 1rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,222 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--primary-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: padding 0.4s ease, background-color 0.4s ease;
+}
+
+.navbar.scrolled {
+    padding: 1rem 5%;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .navbar {
+    background-color: var(--primary-bg);
+}
+
+body.light-mode .navbar.scrolled {
+    background-color: rgba(247, 247, 255, 0.95);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+    transition: var(--transition);
+}
+
+.logo-text span {
+    color: var(--primary-accent);
+}
+
+/* Desktop Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    position: relative;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.nav-links .nav-item:hover {
+    color: var(--secondary-accent);
+}
+
+.nav-links .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links .nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+}
+
+.nav-button.login-button {
+    background-color: var(--secondary-accent);
+    color: var(--primary-bg);
+}
+
+.nav-button.login-button:hover {
+    background-color: var(--secondary-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.nav-button.logout-button {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+.nav-button.logout-button:hover {
+    background-color: var(--primary-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+.nav-icon-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-accent);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-icon-button:hover {
+    color: var(--secondary-accent);
+}
+
+.theme-toggle-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+    color: var(--secondary-accent);
+}
+
+/* Mobile-only actions */
+.mobile-actions {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--secondary-accent);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Hide desktop menu on smaller screens */
+    }
+
+    .mobile-actions {
+        display: flex; /* Show mobile actions on smaller screens */
+    }
+}
+
+/* Special case for modal on mobile */
+.mobile-nav-items .nav-button {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Light mode overrides for Navbar */
+body.light-mode .nav-links .nav-item {
+    color: var(--text-color);
+}
+
+body.light-mode .nav-links .nav-item:hover {
+    color: var(--primary-accent);
+}
+
+body.light-mode .nav-links .nav-item:hover::after {
+    background-color: var(--primary-accent);
+}
+
+body.light-mode .logo-text {
+    color: var(--text-color);
+}
+
+body.light-mode .logo-text span {
+    color: var(--primary-accent);
+}
+
+body.light-mode .theme-toggle-button,
+body.light-mode .hamburger {
+    color: var(--text-color);
+}
+
+body.light-mode .nav-icon-button {
+    color: var(--primary-accent);
+}

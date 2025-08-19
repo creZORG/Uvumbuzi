@@ -1,0 +1,27 @@
+/* src/components/ErrorBoundary.css */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+.error-content h1 {
+    font-size: 3rem;
+    color: #ff4d4d; /* A red color for errors */
+    margin-bottom: 1rem;
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.error-content .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}

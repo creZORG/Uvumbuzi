@@ -1,0 +1,94 @@
+/* src/pages/ProjectDetailPage.css */
+
+.project-detail-page {
+    padding: 10rem 5% 5rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+.project-detail-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.project-detail-page .loading-state,
+.project-detail-page .not-found {
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-detail-page .not-found h2 {
+    color: #ff4d4d;
+}
+
+.project-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-detail-title {
+    font-size: 2.5rem;
+    color: var(--secondary-accent);
+    margin: 0;
+}
+
+.project-detail-image-container {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-detail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.project-detail-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.project-status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.project-status.status-ongoing {
+    background-color: #FFA000;
+}
+.project-status.status-completed {
+    background-color: #4CAF50;
+}
+.project-status.status-upcoming {
+    background-color: var(--primary-accent);
+}
+
+@media (max-width: 768px) {
+    .project-detail-page .container {
+        padding: 1.5rem;
+    }
+    .project-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

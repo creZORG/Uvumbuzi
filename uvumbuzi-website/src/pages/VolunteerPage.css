@@ -1,0 +1,73 @@
+/* src/pages/VolunteerPage.css */
+
+.volunteer-page {
+    padding: 10rem 5% 5rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.volunteer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.volunteer-form-container {
+    background-color: var(--secondary-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    max-width: 600px;
+    width: 100%;
+}
+
+.volunteer-form-container h3 {
+    font-size: 2rem;
+    color: var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+.volunteer-form-container p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.volunteer-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.volunteer-form label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.volunteer-form input, .volunteer-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.volunteer-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}

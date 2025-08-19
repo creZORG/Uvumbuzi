@@ -1,0 +1,78 @@
+/* src/pages/GetInvolvedPage.css */
+
+.get-involved-page {
+    padding: 10rem 5% 5rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.involved-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.involved-card {
+    background-color: var(--secondary-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.involved-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary-accent);
+    margin-bottom: 1.5rem;
+}
+
+.involved-card h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-accent);
+    margin-bottom: 1rem;
+}
+
+.involved-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.involved-btn {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.involved-btn:hover {
+    background-color: var(--primary-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}

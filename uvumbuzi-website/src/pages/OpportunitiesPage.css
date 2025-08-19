@@ -1,0 +1,418 @@
+/* src/pages/OpportunitiesPage.css */
+
+.opportunities-page {
+    padding: 10rem 5% 5rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.opportunities-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.opportunities-tabs .tab-btn {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.opportunities-tabs .tab-btn.active,
+.opportunities-tabs .tab-btn:hover {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+.tab-content {
+    background-color: var(--secondary-bg);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+/* View Offerings Tab */
+.view-offerings-tab {
+    min-height: 50vh;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.member-card {
+    background-color: var(--primary-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+.member-info h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.member-info .job-title {
+    font-size: 1rem;
+    color: var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.location i {
+    margin-right: 0.5rem;
+    color: var(--primary-accent);
+}
+
+.wage {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-accent);
+    margin-bottom: 1.5rem;
+}
+
+.hire-button {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.hire-button:hover {
+    background-color: var(--primary-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+.no-services-message {
+    text-align: center;
+    width: 100%;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+/* Manage Offerings Tab */
+.manage-offerings-tab {
+    min-height: 50vh;
+}
+
+.post-job-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-job-section .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.post-job-section p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.my-offerings-section h3 {
+    font-size: 2rem;
+    color: var(--primary-accent);
+    margin-bottom: 1.5rem;
+}
+
+.offerings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.offerings-list .no-offerings-message {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.offering-item {
+    background-color: var(--primary-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offering-item .offering-info h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.offering-item .offering-info p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.offering-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.status-badge.status-pending {
+    background-color: #ffc107;
+}
+
+.status-badge.status-approved {
+    background-color: #4CAF50;
+}
+
+.status-badge.status-denied {
+    background-color: #d9534f;
+}
+
+.status-badge.status-deleted {
+    background-color: #555;
+    color: #ccc;
+}
+
+.pending-status-text, .denied-status-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.deleted-status-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #d9534f;
+}
+
+.delete-btn {
+    background: none;
+    border: 1px solid #d9534f;
+    color: #d9534f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Modal and Form Styles */
+.modal-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-step {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-actions .btn {
+    padding: 0.8rem 2rem;
+}
+
+.form-actions .btn-secondary {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--text-muted);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+}
+
+.wage-input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.wage-input-group input {
+    flex: 2;
+}
+
+.wage-input-group select {
+    flex: 1;
+}
+
+.form-submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    text-transform: uppercase;
+}
+
+.confirm-modal-content {
+    text-align: center;
+}
+
+.confirm-modal-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.confirm-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.delete-confirm-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+.delete-confirm-btn:hover {
+    background-color: #c9302c;
+}
+
+.contact-info-content h4 {
+    font-size: 1.5rem;
+    color: var(--secondary-accent);
+    margin-bottom: 1rem;
+}
+
+.contact-info-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-accent);
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-link i {
+    font-size: 1.2rem;
+}
+
+.description-card {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

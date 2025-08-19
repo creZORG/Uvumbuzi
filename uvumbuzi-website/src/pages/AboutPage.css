@@ -1,0 +1,155 @@
+/* src/pages/AboutPage.css */
+
+.about-page {
+    padding: 10rem 5% 5rem;
+    background-color: var(--secondary-bg);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: var(--secondary-accent);
+    margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.mission-vision-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mission-vision-section .card {
+    background-color: var(--primary-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-accent);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.mission-vision-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-vision-section .card h3 {
+    color: var(--primary-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mission-vision-section .card p {
+    color: var(--text-color);
+}
+
+.team-section {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: var(--secondary-accent);
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-accent);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading-state, .no-items-message {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-accent);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.team-member-card {
+    background-color: var(--primary-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+.team-member-card h4 {
+    color: var(--secondary-accent);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+    color: var(--primary-accent);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.team-member-bio {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-subtitle {
+        font-size: 1rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+}
